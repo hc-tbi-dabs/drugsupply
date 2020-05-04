@@ -4,7 +4,7 @@ library(tidyverse)
 library(data.table)
 # library(openxlsx)
 # library(writexl)
-Sys.setenv(JAVA_HOME="C:/Users/MMALAVER/Java")
+Sys.setenv(JAVA_HOME="**location where JAVA is stored**")
 library(xlsx)
 
 # options(encoding="utf-8")
@@ -16,7 +16,7 @@ library(xlsx)
 # Impossible to read from the network
 
 
-setwd("C:/Users/MMALAVER/Documents/raf/latest_raw_data/cleaned_data2/")
+setwd("**set your working directory**")
 options(scipen=999)
 
 file.list <- list.files(pattern='*.xlsx') # recursive = TRUE: to analyze subfolders
@@ -177,6 +177,9 @@ finalxx %>% filter(DIN=="'02237224")
 
 finalxx <- finalxx %>% 
   mutate(DIN = replace(DIN, DIN == "'02237224", "02237224"))
+
+# Adding leading zeros
+finalxx$DIN <- sprintf("%08s", finalxx$DIN)
 
 write.xlsx(finalxx, "final_file_55.xlsx")
 write_rds(finalxx, "final_file_55.rds")
