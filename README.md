@@ -1,4 +1,4 @@
-# Drugsupply
+# Drug supply:
 
 - The information in the .xlsx files need to be stored in columns A to T.
 - Verify that files are stored as xlsx and not XLSX.
