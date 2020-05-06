@@ -6,7 +6,7 @@
 - French files need to be copied and validated to the EN version.
 
 # To do:
-- Translate FR to EN.
-- Loop is not efficient as it is looping twice.
-- Split one company file into 2 (ask me via Slack for details) or need to replace file X with the 2 validated files.
+- Translate FR (molecules, type of package, etc.) to EN.
+- Current loop is not efficient as it is looping twice over the same information.
+- Split one company file into 2 (ask via Slack for details) or replace file X with the 2 validated XY and XX files.
 
